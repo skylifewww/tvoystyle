@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Твой Style</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'tvoy_style/css/style.css' %}"/>
+
+   </head>
+   
+   
+<body>
+{% block contact %}{% endblock %}
+
+{% block index %}{% endblock %}
+{% block advice %}{% endblock %}
+{% block article %}{% endblock %}
+		
+			
+				<div class="dark">
+			<h4>Твой Style - мебель для успешных людей</h4>
+			<p>Следи за нами в соц. сетях и первым узнавай<br/>о самых интересных педложениях и крутых идеях:</p>
+			<a href="https://www.facebook.com/twoystyle/"><img alt="Facebook" src="{% static 'tvoy_style/img/FB.png' %}"/></a>
+			<a href="https://new.vk.com/swoystyle"><img alt="Vkontakte" src="{% static 'tvoy_style/img/VK.png' %}"/></a>
+		</div>
+		
+</body>
+
+</html>

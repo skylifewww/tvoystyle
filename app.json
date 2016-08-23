@@ -1,0 +1,8 @@
+{
+  "name": "tvoy_style",
+  "description": "Tvoy Style",
+  "image": "heroku/python",
+  "repository": "https://",
+  "keywords": ["style", "design" ],
+  "addons": [ "heroku-postgresql" ]
+}

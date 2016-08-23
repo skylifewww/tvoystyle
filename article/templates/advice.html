@@ -1,0 +1,76 @@
+{% extends "main.html" %}
+{% load staticfiles %}
+{# {% load embed_video_tags %} #}
+{# {% load mptt_tags %} #}
+
+{% block advice %}
+
+<div id="h_bg"><p>ДЛЯ УСПЕШНЫХ ЛЮДЕЙ</p>
+	</div>
+	
+		<div id="head">		
+			<div id="logo">
+			</div>
+		</div>
+		
+		<div class="caption_red">
+			<h1>дорогая мебель</h1>
+			<h2>ручной работы</h2>
+		</div>
+		
+		<div class="caption_white">
+			<p>Стильно.  Статусно.  Навсегда.</p>
+		</div>
+		
+		<hr>
+		
+		<div id="bullit">
+			<div class="bullit">
+			<ul>
+				<li><p class="zag">Для Вашего дома</p>
+				</li>
+			</ul>
+			</div>
+
+			<div class="bullit">
+			<ul>
+				<li><p class="zag">Для Вашего бизнеса</p>
+				</li>
+			 </ul>
+			</div>
+			
+			<div class="bullit">
+			<ul>
+				<li><p class="zag">Для Вашего отдыха</p>
+				</li>
+			</ul>	
+			
+			</div>
+		</div>
+
+<div id="menu">
+			<ul>
+				<li><a href="/contact/">спросить</a></li>
+				<li class="l"><a href="/">главная</a></li>
+				<li class="l"><a href="/contact/">заказать</a></li>
+			</ul>
+		</div>
+
+	{% for article in articles %}	
+		
+	<div class="article">
+			<div id="article_head">
+				<div class="article_bg_cover">
+					<h4>{{ article.article_title }}<br/>{{ article.article_title_small }}</h4>
+				</div>
+			</div>
+					<p>{{ article.short_text|safe }}</p>
+				
+					<div class="button"><a class="btn2" href="/advice/article/get/{{ article.id }}/">подробнее</a></div>
+				<div class="article_footer">
+				</div>
+	</div>
+		
+{% endfor %}		
+		
+{% endblock %}

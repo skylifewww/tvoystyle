@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block contact %}
+
+ 	
+		<div id="menu" style="margin-top: 15px; margin-bottom: 25px;">
+			<ul>
+				<li><a href="/contact/">спросить</a></li>
+				<li class="l"><a href="/advice/">полезные советы</a></li>
+				<li class="l"><a href="/">назад</a></li>
+			</ul>
+		</div>
+		
+		<div class="dark" id="order">
+			<p style="font-size: 22pt;">Расскажите нам, что вам нужно?</p>
+		</div>	
+		
+		<div class="light">	
+		
+			<!-- форма связи -->
+
+	<p style="margin-bottom: 0px;">Отправьте нам ваши контактные данные и<br/>в общих чертах опишите что Вам нужно<br/><br/>мы как можно быстрее с Вами свяжемся</p>
+<form method="POST" id="feedback-form" role="form" action="">
+ {% csrf_token %}
+Ваше имя:
+{# <input type="{{ form.contact_name }}"  name="nameFF" required placeholder="Как к вам обращаться"  {{ form.contact_name }} x-autocompletetype="name"> #}
+ <p>{{ form.contact_name }} </p>
+
+e-mail/телефон:
+{# <input type="email" name="contactFF" required placeholder="адрес электронной почты/номер телефона" x-autocompletetype="email"> #}
+<p>{{ form.contact_email }}</p>
+ Что Вас интересует:
+{# <textarea name="messageFF" required rows="5"></textarea> #}
+<p>{{ form.content }}</p>
+<input type="submit" value="отправить">
+</form>
+<!-- конец формы связи -->
+		</div>
+		
+{% endblock %}	
