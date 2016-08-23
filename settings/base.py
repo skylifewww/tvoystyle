@@ -28,10 +28,10 @@ ROOT_URLCONF = 'tvoy_style.urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
-RECAPTCHA_PUBLIC_KEY = '6LccKSgTAAAAADovCKWjMyGhPKeT_Nfc-rckYWNt'
-RECAPTCHA_PRIVATE_KEY = '6LccKSgTAAAAAKsvL4_ARxRQfZtLz_uJ1ASIpKdD'
+# RECAPTCHA_PUBLIC_KEY = '6LccKSgTAAAAADovCKWjMyGhPKeT_Nfc-rckYWNt'
+# RECAPTCHA_PRIVATE_KEY = '6LccKSgTAAAAAKsvL4_ARxRQfZtLz_uJ1ASIpKdD'
 
-CAPTCHA_AJAX = True
+# CAPTCHA_AJAX = True
 
 TESTING = 'test' in sys.argv[0]
 DEVELOPMENT = 'run.py' in sys.argv or 'runserver' in sys.argv or 'collectstatic' in sys.argv

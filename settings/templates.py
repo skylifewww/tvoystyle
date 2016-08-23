@@ -12,12 +12,6 @@ CONTEXT_PROCESSORS = (
 )
 
 TEMPLATES = [
-    # {
-    #     'BACKEND': 'django.template.backends.jinja2.Jinja2',
-    #     'DIRS': [rel('templates')],
-    #     'APP_DIRS': False,
-    #     'OPTIONS': {'environment': 'tvoy_style.core.jinja.environment'},
-    # },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [rel('templates'),
