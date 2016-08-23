@@ -147,14 +147,14 @@ class Article(models.Model):
     # article_works = models.ManyToManyField(Works, related_name=u"works", related_query_name="works", verbose_name=u"Примеры работ", blank=True, default="")
     # article_category = TreeForeignKey(Category, related_name="articles", verbose_name=u"Категории", default="", blank=True)
     # article_author = TreeForeignKey(Author, related_name="autor", max_length=200, verbose_name="Автор статьи", blank=True, default="")
-    short_text = RichTextUploadingField(blank=True, verbose_name="Короткое описание RU")
-    image = ThumbnailerImageField(upload_to=make_upload_path, blank=True, verbose_name="Шапка статьи")
-    slug = models.CharField(max_length=250, blank=True, verbose_name="Урл")
-    full_text = RichTextUploadingField(blank=True, verbose_name="Полное описание RU")
+    short_text = RichTextUploadingField(blank=True, verbose_name=u"Короткое описание RU")
+    # image = ThumbnailerImageField(upload_to=make_upload_path, blank=True, verbose_name=u"Шапка статьи")
+    slug = models.CharField(max_length=250, blank=True, verbose_name=u"Урл")
+    full_text = RichTextUploadingField(blank=True, verbose_name=u"Полное описание RU")
     # article_video = EmbedVideoField(verbose_name='Видео', blank=True, help_text='URL video', null=True)
     # video_published = models.BooleanField( blank=True, default="")
 
-    def __str__(self):
+    def __unicode__(self):
         return self.article_title
 
     class Meta:
