@@ -45,7 +45,7 @@ def contact(request):
             content = template.render(context)
 
             email = EmailMessage(
-                u"Пришел новый заказ",
+                u"Твой Стиль",
                 content,
                 "Your website" +'',
                 ['skylifewww@gmail.com'],
