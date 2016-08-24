@@ -50,7 +50,8 @@
 
 	<div id="menu">
 			<ul>
-				<li><a href="/contact/">спросить</a></li>
+				{# <li><a href="/contact/">спросить</a></li> #}
+				<li><a href="#ask">спросить</a></li>
 				<li class="l"><a href="/advice/">полезные советы</a></li>
 				<li class="l"><a href="/contact/">заказать</a></li>
 			</ul>
@@ -137,9 +138,29 @@
 		
 		<div class="dark" id="ask">
 			<p style="font-size: 22pt;">Есть вопросы ? - Задавайте</p>
+
+						<!-- форма связи -->
+
+		<div class="light">					
+
+	<p style="margin-bottom: 0px;">Отправьте нам ваши контактные данные и<br/>в общих чертах опишите что Вам нужно<br/><br/>мы как можно быстрее с Вами свяжемся</p>
+<form method="POST" id="feedback-form" role="form" action="/contact/">
+ {% csrf_token %}
+Ваше имя:
+<input name="contact_name" required placeholder="Как к вам обращаться" x-autocompletetype="name" value="" >
+
+e-mail/телефон:
+<input name="contact_email" required placeholder="адрес электронной почты/номер телефона" x-autocompletetype="email" value="" >
+
+ Что Вас интересует:
+<textarea name="content" required rows="5" value="" ></textarea>
+
+<input type="submit" value="отправить">
+</form>
+<!-- конец формы связи -->
 		</div>	
 
-		<div class="light">		
+			
 
 			
 
