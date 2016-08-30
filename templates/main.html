@@ -1,21 +1,23 @@
 {% load staticfiles %}
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 
-<html lang="en">
+<html lang="ru">
 
 <head>
 		
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 
 <title>Твой Style</title>
  
-<meta name="description" content="дорогая мебель ручной работы">
 
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <meta name="description" content="дорогая мебель ручной работы">
 
     <meta name="keywords" content="стиль, дизайн"/>
    
@@ -45,7 +47,26 @@
 			<a href="https://www.facebook.com/twoystyle/"><img alt="Facebook" src="{% static 'tvoy_style/img/FB.png' %}"/></a>
 			<a href="https://new.vk.com/swoystyle"><img alt="Vkontakte" src="{% static 'tvoy_style/img/VK.png' %}"/></a>
 		</div>
-		
+
+
+	 <!-- Scripts -->
+  
+
+   <script>
+     $(function(){
+   
+       var $container = $('.grid');
+     
+       $container.imagesLoaded( function(){
+         $container.masonry({
+           itemSelector : 'li'
+         });
+       });
+     
+     });
+   </script>	
+
+   
 </body>
 
 </html>

@@ -50,16 +50,16 @@
 
 <div id="menu">
 			<ul>
-				<li><a href="/contact/">спросить</a></li>
+				<li><a href="/#ask">спросить</a></li>
 				<li class="l"><a href="/">главная</a></li>
 				<li class="l"><a href="/contact/">заказать</a></li>
 			</ul>
 		</div>
 
 	{% for article in articles %}	
-		
-	<div class="article">
-			<div id="article_head">
+
+		<div class="article">
+			<div id="article_head" style="background-image: url({{ article.slug }})"> 
 				<div class="article_bg_cover">
 					<h4>{{ article.article_title }}<br/>{{ article.article_title_small }}</h4>
 				</div>

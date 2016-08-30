@@ -4,28 +4,27 @@
 {# {% load mptt_tags %} #}
 
 {% block article %}		
-		
-	<div class="article" style="margin-top: 0; padding-bottom: 30px;">
-			<div id="article_head">
+
+<div class="article" style="margin-top:0; padding-bottom: 30px;">
+			<div id="article_head" style="background-image: url({{ article.slug }})"> 
 				<div class="article_bg_cover">
-								<h4>{{ article.article_title }}<br/>{{ article.article_title_small }}</h4>
+					<h4>{{ article.article_title }}<br/>{{ article.article_title_small }}</h4>
 				</div>
 			</div>
 					<p>{{ article.full_text|safe }}</p>
 
-	</div>	
-	
-	
+	</div>
+		
 				<div class="share">
 					<p>Полезно? - поделитесь этим в социальных сетях</p>
 					<a href="http://www.facebook.com/sharer/sharer.php?u=http://tvoystyle.herocuapp.com/advice/article/get/{{ article.id }}/" target="_blank" title="Facebook"><img src="{% static 'tvoy_style/img/FB.png' %}" width="35px" height="35px"></a>
 					<a href="http://vk.com/share.php?url=http://tvoystyle.herokuapp.com/advice/article/get/{{ article.id }}/" target="_blank" title="VKontakte"><img src="{% static 'tvoy_style/img/VK.png' %}" width="35px" height="35px"></a>
 				</div>
-				
+		   		
 				
 		<div id="menu" style="margin-top: 30px; margin-bottom: 30px;">
 			<ul>
-				<li><a href="/contact/">спросить</a></li>
+				<li><a href="/#ask">спросить</a></li>
 				<li class="l"><a href="/advice/">назад</a></li>
 				<li class="l"><a href="/contact/">заказать</a></li>
 			</ul>
