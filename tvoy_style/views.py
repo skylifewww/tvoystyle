@@ -48,7 +48,7 @@ def contact(request):
                 u"Твой Стиль",
                 content,
                 "Your website" +'',
-                ['skylifewww@gmail.com'],
+                ['dezigner20@gmail.com'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
@@ -93,7 +93,7 @@ def index(request):
                 u"Задан новый вопрос",
                 content,
                 "Your website" +'',
-                ['skylifewww@gmail.com'],
+                ['dezigner20@gmail.com'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
