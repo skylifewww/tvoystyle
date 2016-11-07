@@ -11,7 +11,7 @@ DEBUG = False
 DOMAIN = 'localhost:8000'
 
 APPEND_SLASH = True
-ALLOWED_HOSTS = ["tvoystyle.herokuapp.com", DOMAIN]
+ALLOWED_HOSTS = ["tvoystyle.herokuapp.co", DOMAIN]
 
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
